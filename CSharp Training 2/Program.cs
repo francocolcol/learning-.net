@@ -6,7 +6,9 @@ namespace CSharp_Training_2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Circulo circulo = new Circulo(25.2);
+            circulo.
         }
     }
+
 }

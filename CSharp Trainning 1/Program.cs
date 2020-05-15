@@ -9,7 +9,7 @@ namespace CSharp_Trainning_1
         private static int[] array = { 1, 5, 7, 8, 4, 2, 3, 6, 9, 54 };
         static void Main(string[] args)
         {
-            //HolaMundo();
+            HolaMundo();
         }
 
         private static void HolaMundo()

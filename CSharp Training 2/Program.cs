@@ -7,7 +7,7 @@ namespace CSharp_Training_2
         static void Main(string[] args)
         {
             Circulo circulo = new Circulo(25.2);
-            circulo.
+            Console.WriteLine(circulo.GetDiametro());
         }
     }
 

@@ -15,18 +15,14 @@ namespace CSharp_Training_2
             GenerarStack();
             while (stack.Count > 0)
                 Console.WriteLine(stack.Pop());
-            Console.WriteLine(empleado.nombre);
-            Console.WriteLine(estudiante.legajo);
+            //Console.WriteLine(empleado.nombre);
+            //Console.WriteLine(estudiante.legajo);
         }
 
         private static void GenerarStack()
         {
-            stack.Push("hola");
-            stack.Push("adios");
-            stack.Push(1);
-            stack.Push(2);
-            stack.Push(3);
-            stack.Push(circulo);
+            stack.Push(empleado);
+            stack.Push(estudiante);
         }
     }
 }

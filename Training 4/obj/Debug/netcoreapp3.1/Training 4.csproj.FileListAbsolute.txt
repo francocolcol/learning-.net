@@ -1,0 +1,13 @@
+C:\Users\Franco-PC\source\repos\CSharp Trainning 1\Training 4\obj\Debug\netcoreapp3.1\Training 4.csprojAssemblyReference.cache
+C:\Users\Franco-PC\source\repos\CSharp Trainning 1\Training 4\obj\Debug\netcoreapp3.1\Training 4.csproj.CoreCompileInputs.cache
+C:\Users\Franco-PC\source\repos\CSharp Trainning 1\Training 4\obj\Debug\netcoreapp3.1\Training 4.AssemblyInfoInputs.cache
+C:\Users\Franco-PC\source\repos\CSharp Trainning 1\Training 4\obj\Debug\netcoreapp3.1\Training 4.AssemblyInfo.cs
+C:\Users\Franco-PC\source\repos\CSharp Trainning 1\Training 4\bin\Debug\netcoreapp3.1\Training 4.exe
+C:\Users\Franco-PC\source\repos\CSharp Trainning 1\Training 4\bin\Debug\netcoreapp3.1\Training 4.deps.json
+C:\Users\Franco-PC\source\repos\CSharp Trainning 1\Training 4\bin\Debug\netcoreapp3.1\Training 4.runtimeconfig.json
+C:\Users\Franco-PC\source\repos\CSharp Trainning 1\Training 4\bin\Debug\netcoreapp3.1\Training 4.runtimeconfig.dev.json
+C:\Users\Franco-PC\source\repos\CSharp Trainning 1\Training 4\bin\Debug\netcoreapp3.1\Training 4.dll
+C:\Users\Franco-PC\source\repos\CSharp Trainning 1\Training 4\bin\Debug\netcoreapp3.1\Training 4.pdb
+C:\Users\Franco-PC\source\repos\CSharp Trainning 1\Training 4\obj\Debug\netcoreapp3.1\Training 4.dll
+C:\Users\Franco-PC\source\repos\CSharp Trainning 1\Training 4\obj\Debug\netcoreapp3.1\Training 4.pdb
+C:\Users\Franco-PC\source\repos\CSharp Trainning 1\Training 4\obj\Debug\netcoreapp3.1\Training 4.genruntimeconfig.cache

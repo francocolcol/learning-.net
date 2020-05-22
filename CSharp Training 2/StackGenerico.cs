@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace CSharp_Training_2
 {
@@ -36,9 +38,9 @@ namespace CSharp_Training_2
             }
             else
             {
+                cantidadEnStack--;
                 T ultimoEnStack = stack[cantidadEnStack];
                 stack[cantidadEnStack] = null;
-                cantidadEnStack--;
                 return ultimoEnStack;
             }
         }
@@ -64,6 +66,47 @@ namespace CSharp_Training_2
             else
             {
                 return false;
+            }
+        }
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            for (int i = cantidadEnStack - 1; i >= 0; i--)
+            {
+                yield return stack[i];
+            }
+        }
+
+        public IEnumerable<T> TopToBottom
+        {
+            get { return stack; }
+        }
+
+        public IEnumerable<T> BottomToTop
+        {
+            get
+            {
+                for (int index = 0; index <= cantidadEnStack - 1; index++)
+                {
+                    if(EstaVacio())
+                    {
+                        throw new MyStackUnderFlowException();
+                    }
+                    else
+                    {
+                        yield return stack[index];
+                    }
+                }
+            }
+        }
+
+        public IEnumerable<T> TopN(int itemsFromTop)
+        {
+            int startIndex = itemsFromTop >= cantidadEnStack ? 0 : cantidadEnStack - itemsFromTop;
+
+            for (int index = cantidadEnStack - 1; index >= startIndex; index--)
+            {
+                yield return stack[index];
             }
         }
     }

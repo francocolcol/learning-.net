@@ -4,16 +4,16 @@ using System.Collections.Generic;
 
 namespace CSharp_Training_2
 {
-    public class StackGenerico <T> where T : class
+    public class StackGenerico <T> : IEnumerable <T> where T : class
     {
         private T[] stack;
-        private int cantidadEnStack;
+        public int cantidadEnStack { get; private set; }
         private int maximo;
 
         public StackGenerico(int maximo)
         {
             this.stack = new T[maximo];
-            cantidadEnStack = 0;
+            cantidadEnStack = -1;
             this.maximo = maximo;
         }
 
@@ -25,8 +25,7 @@ namespace CSharp_Training_2
             }
             else
             {
-                stack[cantidadEnStack] = objeto;
-                cantidadEnStack++;
+                stack[++cantidadEnStack] = objeto;
             }
         }
 
@@ -38,16 +37,15 @@ namespace CSharp_Training_2
             }
             else
             {
-                cantidadEnStack--;
                 T ultimoEnStack = stack[cantidadEnStack];
-                stack[cantidadEnStack] = null;
+                stack[cantidadEnStack--] = null;
                 return ultimoEnStack;
             }
         }
 
         public bool EstaVacio()
         {
-            if(cantidadEnStack <= 0)
+            if(cantidadEnStack <= -1)
             {
                 return true;
             }
@@ -71,22 +69,26 @@ namespace CSharp_Training_2
 
         public IEnumerator<T> GetEnumerator()
         {
-            for (int i = cantidadEnStack - 1; i >= 0; i--)
+            for (int i = cantidadEnStack; i >= 0; i--)
             {
                 yield return stack[i];
             }
         }
 
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
         public IEnumerable<T> TopToBottom
         {
-            get { return stack; }
+            get { return this; }
         }
 
         public IEnumerable<T> BottomToTop
         {
             get
             {
-                for (int index = 0; index <= cantidadEnStack - 1; index++)
+                for (int index = 0; index <= cantidadEnStack; index++)
                 {
                     if(EstaVacio())
                     {
@@ -102,12 +104,13 @@ namespace CSharp_Training_2
 
         public IEnumerable<T> TopN(int itemsFromTop)
         {
-            int startIndex = itemsFromTop >= cantidadEnStack ? 0 : cantidadEnStack - itemsFromTop;
+            int startIndex = --itemsFromTop >= cantidadEnStack ? 0 : cantidadEnStack - itemsFromTop;
 
-            for (int index = cantidadEnStack - 1; index >= startIndex; index--)
+            for (int index = cantidadEnStack; index >= startIndex; index--)
             {
                 yield return stack[index];
             }
         }
+
     }
 }
